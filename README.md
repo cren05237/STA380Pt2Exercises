@@ -9,8 +9,17 @@ Submission for Jenna Ferguson, Ian McIntosh, Julia Peitsch, and Cassie Ren
 
 
 ## Visual Story Telling Part 1: Green Buildings
+
+[Visual Story Telling Part 1](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#visual-story-telling-part-1:-green-buildings)
+
 ## Visual Story Telling Part 2: Capital Metro data
+
+[Visual Story Telling Part 2](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#visual-story-telling-part-2:-capital-metro-data)
+
 ## Clustering and Dimensionality Reduction
+
+[Clustering and Dimensionality Reduction](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#clustering-and-dimensionality-reduction)
+
 ## Market Segmentation
 
 [Market Segmentation RMD File](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Market%20Segmentation.Rmd)
