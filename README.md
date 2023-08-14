@@ -5,7 +5,7 @@ Submission for Jenna Ferguson, Ian McIntosh, Julia Peitsch, and Cassie Ren
 
 ## Wrangling the Billboard Top 100
 
-[Wrangling Billboard](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#Wrangling-the-Billboard-Top-100)
+[Wrangling Billboard](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#wrangling-the-billboard-top-100)
 
 
 ## Visual Story Telling Part 1: Green Buildings
