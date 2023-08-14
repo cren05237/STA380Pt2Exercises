@@ -1,0 +1,79 @@
+---
+title: "Association Rule Mining"
+author: "STA380 Exam 2"
+date: "8/14/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include = FALSE}
+library(tidyverse)
+library(igraph)
+library(arules)  
+library(arulesViz)
+library(knitr)
+```
+
+```{r}
+# Read the contents of the text file
+file_path <- "groceries.txt"
+data <- readLines(file_path)
+
+# Split the data into individual baskets
+baskets <- strsplit(data, ",")
+
+# Remove leading and trailing whitespace from items in each basket
+baskets <- lapply(baskets, function(basket) trimws(basket))
+```
+
+```{r}
+
+# Convert the list of baskets into the "transactions" class
+transactions <- as(baskets, "transactions")
+summary(transactions)
+
+itemFrequencyPlot(transactions, topN=10,  cex.names=1)
+
+# Now run the apriori algorithm
+groceryrules <- apriori(transactions,
+                      parameter = list(support = 0.005, confidence = 0.1, maxlen = 4))
+
+```
+
+
+Throughout all baskets analyzed in this dataset, the top 5 items that appear most frequently across all transactions are whole milk, other vegetables, rolls/buns, soda, and yogurt. We also found that for this dataset, the median number of items in each transaction was 3.
+
+```{r}
+#Plot rules to determine best subsets
+
+plot(groceryrules, measure = c("support", "lift"), shading = "confidence")
+plot(groceryrules, method='two-key plot')
+
+```
+
+After plotting the rules, we found that high lift rules have low support, but that confidence is well spread. This might indicate some niche associations between items. We also see that as order increases, support decreases, indicating that longer and more complex rules capture more niche patterns of customer behavior, and represent less commong combinations of items in this dataset.
+
+```{r}
+#inspect subsets
+inspect(subset(groceryrules, subset=lift > 3.5))
+inspect(subset(groceryrules, subset=confidence > .6))
+```
+Among a subset of high confidence rules, we see whole milk to be a common consequent, often with the antecedent including common kitchen staples. 
+
+Among the subset of high lift rules, we also see whole milk to be a common consequent, likely because whole milk is very commonly purchased.
+
+```{r}
+grocery_graph = associations2igraph(subset(groceryrules, lift>2.5), associationsAsNodes = FALSE)
+igraph::write_graph(grocery_graph, file='groceries.graphml', format = "graphml")
+```
+
+```{r, echo=FALSE}
+include_graphics("groceryvisual.pdf")
+```
+
+We created an association graph with the edges as the lift of the rules, based on a subset of the rules where lift > 2.5. The edges are ranked by the lift metric, and the nodes and edges are used using the Fructherman-Reingold layout algorithm. There are 41 nodes and 170 edges. 
+
+We see that there is a strong association between customers who buy whole milk, and those who buy whipped cream or sour cream. This could potentially be due to the fact that both are common dairy staples. We also saw this relationship among the high confidence rules, indicating a strong association between these dairy products. At the top of this visual, we see a reciprocal relationship between ham and white bread, indicating that customers frequently purchase these items together, likely due to sandwich making. We see an association between buying citrus fruit and pip fruit and buying tropical fruit, and also between buying citus and tropical fruits and buying pip fruits, showing a great interconnection between these items. A similar relationship exists between buying root vegetables and buying other vegetables. This is could indicate healthy eating patterns with customers buying a variety of fruits and vegetables, and could also be explained by the fact that root vegetables and other vegetables are commonly used together in dishes invololving vegetables. 
