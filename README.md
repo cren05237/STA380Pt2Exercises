@@ -11,7 +11,7 @@ Submission for Jenna Ferguson, Ian McIntosh, Julia Peitsch, and Cassie Ren
 
 ## The Reuters Corpus
 ## Association Rule Mining
-[Association Rule Mining RMD File] (https://github.com/cren05237/STA380Pt2Exercises/blob/main/Association%20Rule%20Mining.Rmd)
+[Association Rule Mining RMD File](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Association%20Rule%20Mining.Rmd)
 
 
 ## Image Classification With Neural Networks
