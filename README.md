@@ -30,6 +30,7 @@ Code: [Market Segmentation RMD File](https://github.com/cren05237/STA380Pt2Exerc
 PDF of RMD with visuals: [Market Segmentation Knit to PDF](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Market%20Segmentation.pdf) 
 
 ## The Reuters Corpus
+Completed in Python
 
 [Reuters Corpus - Python](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#the-reuters-corpus)
 
@@ -43,5 +44,6 @@ PDF of RMD file with visuals and Gephi included (use this to view Gephi visual):
 
 
 ## Image Classification With Neural Networks
+Completed in Python
 
 [Neural Networks - Python](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#image-classification-with-neural-networks)
