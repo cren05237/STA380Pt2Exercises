@@ -1,7 +1,7 @@
 # STA380Pt2Exercises
 Submission for Jenna Ferguson, Ian McIntosh, Julia Peitsch, and Cassie Ren
 ## Probability Practice
-[Probability Practice](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#Probability Practice)
+[Probability Practice](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#Probability-Practice)
 
 ## Wrangling the Billboard Top 100
 ## Visual Story Telling Part 1: Green Buildings
