@@ -1,0 +1,108 @@
+---
+title: "Market Segmentation"
+author: "STA380 Exam 2"
+date: "2023-08-14"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Market Segmentation
+
+```{r, include = FALSE}
+# importing necessary packages
+library(ggplot2)
+library(ClusterR)  # for kmeans++
+library(foreach)
+library(mosaic)
+```
+
+```{r}
+# importing dataset
+social = read.csv('C:/Users/ianwm/Downloads/social_marketing.csv', header=TRUE)
+set.seed(1)
+```
+```{r}
+# centering and scaling data
+X = social[,-(1)]
+X = scale(X, center=TRUE, scale=TRUE)
+```
+```{r}
+# Extract the centers and scales from the rescaled data (which are named attributes)
+mu = attr(X,"scaled:center")
+sigma = attr(X,"scaled:scale")
+```
+```{r}
+# Run k-means with 6 clusters and 25 starts
+clust1 = kmeans(X, 6, nstart=25)
+```
+```{r}
+# What are the clusters?
+round(clust1$center, 3)
+```
+We can see some clusters starting to form here. While cluster 1 does not have any features that stand out, cluster 2 appears to be very focused on health and nutrition, the outdoors and personal fitness. Cluster 3 focuses on sports fandom, food, family, religion, parenting and school, while cluster 4 is more focused on online gaming, college, and playing sports. Cluster 5 likes travel, politics, news, computers and cars, and finally cluster 6 likes photo sharing, cooking and beauty. While these are some good clusters, the one cluster without any big interests tells us to try a model with fewer clusters.
+```{r}
+# Run k-means with 5 clusters and 25 starts
+clust2 = kmeans(X, 5, nstart=25)
+```
+```{r}
+# What are the clusters?
+round(clust2$center, 3)
+```
+Unfortunately, cluster 1 still does not have any major interests. Cluster 2 appears to be similar to the cluster 5 of the last model. Cluster 3 appears similar to cluster 2 of the last model, while cluster 4 appears somewhat similar to cluster 6. Finally, cluster 5 appears to be similar to cluster 3 of the last model. We will try with 4 clusters to see if we get any definite segments.
+```{r}
+# Run k-means with 4 clusters and 25 starts
+clust3 = kmeans(X, 4, nstart=25)
+```
+```{r}
+# What are the clusters?
+round(clust3$center, 3)
+```
+While we see some of the same patterns, as the previous models, the clusters appear to be getting mixed together, as the differences between them are decreasing. We will try again with 3 and 7 clusters before making any final decisions. 
+```{r}
+# Run k-means with 7 clusters and 25 starts
+clust4 = kmeans(X, 7, nstart=25)
+```
+```{r}
+# What are the clusters?
+round(clust4$center, 7)
+```
+```{r}
+# Run k-means with 3 clusters and 25 starts
+clust5 = kmeans(X, 3, nstart=25)
+```
+```{r}
+# What are the clusters?
+round(clust5$center, 3)
+```
+7 clusters yields similar clusters to what we have already seen, while 3 clusters seems to blur the clusters even further. So far 5, 6 and 7 clusters seems to reveal the best models.
+We see the same 5 clusters in the 6 and 7 cluster models. However, there is an additional cluster added with the 7 cluster model. We will run the model with 8 clusters to verify if this cluster is legitimate.
+```{r}
+# Run k-means with 8 clusters and 25 starts
+clust6 = kmeans(X, 8, nstart=25)
+```
+```{r}
+# What are the clusters?
+round(clust6$center, 8)
+```
+The 8 cluster model confirms the validity of this cluster, and also finds a new cluster, however this cluster consists of spam and adult content, and therefore it is not an audience that Nutrient H2O needs to be concerned with. 
+Before, we confirm these clusters as the final segments of the market, we will finally run the model 10 and 50 starts, along with the 8 clusters.
+```{r}
+# Run k-means with 8 clusters and 10 starts
+clust7 = kmeans(X, 8, nstart=10)
+```
+```{r}
+# What are the clusters?
+round(clust7$center, 8)
+```
+```{r}
+# Run k-means with 8 clusters and 50 starts
+clust8 = kmeans(X, 8, nstart=50)
+```
+```{r}
+# What are the clusters?
+round(clust8$center, 8)
+```
+Both the model with 10 starts and the one with 50 starts support the existence of the clusters we saw earlier. These clusters seem to represent segments of the market, with each segment having a group of correlated interests. One segment is interested in health, the outdoors and personal fitness. Another seems to like chatter and shopping. There is one segment that enjoys travel, politics, news, computers and cars. Another artistic segment of Twitter focuses on photo sharing, cooking, beauty and fashion. A fifth segment likes online gaming, sports playing and college. The final cluster is interested in sports fans, food, family, religion, parenting and school. Many of these clusters make logical sense, as many of the interests in each segment are somewhat linked. Nutrient H2O can use the information to make advertisements towards people who share an interest that would be correlated to their product. For example, if they have a product that is healthy and high in nutrition value, they could market ads for that product towards people who post about content related to the outdoors or their personal fitness. 
