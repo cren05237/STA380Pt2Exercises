@@ -7,7 +7,7 @@ Submission for Jenna Ferguson, Ian McIntosh, Julia Peitsch, and Cassie Ren
 ## Clustering and Dimensionality Reduction
 ## Market Segmentation
 
-[Market Segmentation RMD File](https://github.com/cren05237/STA380Pt2Exercises/edit/main/README.md)
+[Market Segmentation RMD File](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Market%20Segmentation.Rmd)
 
 ## The Reuters Corpus
 ## Association Rule Mining
