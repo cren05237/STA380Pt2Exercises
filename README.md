@@ -3,6 +3,7 @@ Submission for Jenna Ferguson, Ian McIntosh, Julia Peitsch, and Cassie Ren
 
 * All solutions completed in Python (except for ReutersCorpus) can be found in the 'Final.ipynb' notebook (linked below each problem completed in python), with each problem organized in sequential order as outlined in this README.
   
+  
 ## Probability Practice
 Completed in Python
  
@@ -40,7 +41,8 @@ PDF of RMD with visuals: [Market Segmentation Knit to PDF](https://github.com/cr
 ## The Reuters Corpus
 Completed in Python (seperate file)
 
-[Reuters Corpus - Python](https://github.com/cren05237/STA380Pt2Exercises/blob/main/TheReutersCorpus.ipynb) 
+[Reuters Corpus - Python](https://github.com/cren05237/STA380Pt2Exercises/blob/main/TheReutersCorpus.ipynb)
+
 
 ## Association Rule Mining
 Completed in R 
