@@ -23,7 +23,9 @@ Completed in Python
 
 ## Market Segmentation
 Completed in R
+
 Code: [Market Segmentation RMD File](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Market%20Segmentation.Rmd) 
+
 PDF of RMD with visuals: [Market Segmentation Knit to PDF](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Market%20Segmentation.pdf) 
 
 ## The Reuters Corpus
@@ -31,8 +33,10 @@ PDF of RMD with visuals: [Market Segmentation Knit to PDF](https://github.com/cr
 [Reuters Corpus - Python](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#the-reuters-corpus)
 
 ## Association Rule Mining
+Completed in R 
 
 Code: [Association Rule Mining RMD File](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Association%20Rule%20Mining.Rmd) 
+
 PDF of RMD file with visuals and Gephi included (use this to view Gephi visual): [Association Rule Mining Knit to PDF](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Association-Rule-Mining.pdf) 
 
 
