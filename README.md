@@ -6,6 +6,9 @@ Submission for Jenna Ferguson, Ian McIntosh, Julia Peitsch, and Cassie Ren
 ## Visual story telling part 2: Capital Metro data
 ## Clustering and dimensionality reduction
 ## Market Segmentation
+
+[Market Segmentation RMD File](Market%20Segmentation.rmd)
+
 ## The Reuters corpus
 ## Association rule mining
 ## Image classification with neural networks
