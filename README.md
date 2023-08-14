@@ -2,13 +2,13 @@
 Submission for Jenna Ferguson, Ian McIntosh, Julia Peitsch, and Cassie Ren
 ## Probability Practice
 ## Wrangling the Billboard Top 100
-## Visual story telling part 1: green buildings
-## Visual story telling part 2: Capital Metro data
-## Clustering and dimensionality reduction
+## Visual Story Telling Part 1: Green Buildings
+## Visual Story Telling Part 2: Capital Metro data
+## Clustering and Dimensionality Reduction
 ## Market Segmentation
 
 [Market Segmentation RMD File](Market%20Segmentation.Rmd) 
 
-## The Reuters corpus
-## Association rule mining
-## Image classification with neural networks
+## The Reuters Corpus
+## Association Rule Mining
+## Image Classification With Neural Networks
