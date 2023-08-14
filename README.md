@@ -5,18 +5,18 @@ Submission for Jenna Ferguson, Ian McIntosh, Julia Peitsch, and Cassie Ren
   
 ## Probability Practice
 Completed in Python
-
+ 
 [Probability Practice - Python](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#Probability-Practice)
 
 ## Wrangling the Billboard Top 100
 Completed in Python
-
+ 
 [Wrangling Billboard - Python](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#wrangling-the-billboard-top-100)
 
 
 ## Visual Story Telling Part 1: Green Buildings
 Completed in Python
-
+ 
 [Visual Story Telling Part 1 - Python](https://github.com/cren05237/STA380Pt2Exercises/blob/main/Final.ipynb#visual-story-telling-part-1:-green-buildings)
 
 ## Visual Story Telling Part 2: Capital Metro data
